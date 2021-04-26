@@ -42,3 +42,6 @@ function curiosity(event) {
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", curiosity);
+
+let apiKey = "15d8ba808a69e2b1ca9d3e09a94e4096";
+let apiUrl = "https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}";
