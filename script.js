@@ -35,6 +35,10 @@ h5.innerHTML = `${day} ${month} ${date} ${year}, ${hours}:${mins}`;
 
 function curiosity(event) {
   event.preventDefault();
+  let apiKey = `13d9fcdae5c8ed4497e6b27254968acc`;
+  let city = document.querySelector("#place-data").value;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(weatherWatch);
   let placeElement = document.querySelector("#place");
   let placeData = document.querySelector("#place-data");
   placeElement.innerHTML = placeData.value;
@@ -43,5 +47,13 @@ function curiosity(event) {
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", curiosity);
 
-let apiKey = "15d8ba808a69e2b1ca9d3e09a94e4096";
-let apiUrl = "https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}";
+function weatherWatch(response) {
+  document.querySelector("#place").innerHTML = response.data.name;
+  document.querySelector("#degree").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#humid").innerHTML = response.data.main.humidity;
+  document.querySelector("#windsweep").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+}
