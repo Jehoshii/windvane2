@@ -56,17 +56,18 @@ function weatherWatch(response) {
   document.querySelector("#windsweep").innerHTML = Math.round(
     response.data.wind.speed
   );
-}
-
-function foreshadowing() {
-  let forecastingElement = document.querySelector("#foreshadowing");
-
-  forecastingElement.innerHTML = "forecast";
+  collectForecast(response.data.coord);
 }
 
 function collectForecast(coordinates){
   let apiKey = `13d9fcdae5c8ed4497e6b27254968acc`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl)
-
+  axios.get(apiUrl).then(foreshadowing);
 }
+
+function foreshadowing(response) {
+  let forecastingElement = document.querySelector("#foreshadowing");
+
+  forecastingElement.innerHTML = "forecast";
+}
+
