@@ -57,3 +57,15 @@ function weatherWatch(response) {
     response.data.wind.speed
   );
 }
+
+function foreshadowing() {
+  let forecastingElement = document.querySelector("#foreshadowing");
+
+  forecastingElement.innerHTML = "forecast";
+}
+
+function collectForecast(coordinates){
+  let apiKey = `13d9fcdae5c8ed4497e6b27254968acc`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates}&lon=${coordinates}&appid=${apiKey}`;
+
+}
