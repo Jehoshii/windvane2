@@ -66,9 +66,4 @@ function collectForecast(coordinates){
   axios.get(apiUrl).then(foreshadowing);
 }
 
-function foreshadowing(response) {
-  let forecastingElement = document.querySelector("#foreshadowing");
-
-  forecastingElement.innerHTML = "forecast";
-}
 

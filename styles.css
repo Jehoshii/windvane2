@@ -42,6 +42,14 @@ h5 {
   text-align: center;
 }
 
+h6 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 7px;
+}
 .weather-request {
   display: block;
   margin: 0 auto;
@@ -75,14 +83,6 @@ h5 {
     palegreen,
     aquamarine
   );
-}
-.plan-ahead {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 32px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  padding: 7px;
 }
 
 .col-1 {
