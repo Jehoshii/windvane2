@@ -1,12 +1,12 @@
 h1 {
   color: cornflowerblue;
-  font-size: 45px;
+  font-size: 70px;
   text-align: center;
   top: 0;
   width: 100%;
   margin: 1;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  border: 1px black;
+  font-family: Luminari;
+  padding: 3px;
 }
 
 h2 {
@@ -21,13 +21,13 @@ h2 {
 
 h3 {
   display: block;
-  max-width: 700px;
+  max-width: 1000px;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Noteworthy;
 }
 
 h4 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Papyrus;
   color: black;
   text-align: center;
   padding: 3px;
@@ -43,28 +43,28 @@ h5 {
 .weather-request {
   display: block;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 1000px;
   text-align: center;
+  align-content: center;
 }
 
 .information {
-  border: 1px solid;
-  max-width: 200px;
+  border: 2px solid;
+  max-width: 300px;
 }
 
 .weather-week {
-  border: 1px solid greenyellow;
   text-align: center;
   display: block;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 7px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: medium;
 }
 
 .intro {
-  background-image: linear-gradient(to bottom, aqua, aquamarine);
+  background-image: image();
   max-width: 1000px;
 }
 .plan-ahead {
@@ -74,4 +74,11 @@ h5 {
   font-size: 32px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 7px;
+}
+
+.col-1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid;
 }
