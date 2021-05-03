@@ -60,7 +60,4 @@ function weatherWatch(response) {
   );
   document.querySelector("#describe").innerHTML = response.data.weather[0].description;
   imageElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
 }
-let button = document.querySelector("button");
-button.addEventListener("click", collectForecast);
