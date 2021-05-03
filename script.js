@@ -48,6 +48,8 @@ let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", curiosity);
 
 function weatherWatch(response) {
+  let imageElement = document.querySelector("#imagery");
+
   document.querySelector("#place").innerHTML = response.data.name;
   document.querySelector("#degree").innerHTML = Math.round(
     response.data.main.temp
@@ -57,7 +59,8 @@ function weatherWatch(response) {
     response.data.wind.speed
   );
   document.querySelector("#describe").innerHTML = response.data.weather[0].description;
-  collectForecast(response.data.coord);
+  imageElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
 }
 
 function collectForecast(coordinates){
@@ -65,5 +68,8 @@ function collectForecast(coordinates){
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(foreshadowing);
 }
+
+let button = document.querySelector("button");
+button.addEventListener("click", collectForecast);
 
 

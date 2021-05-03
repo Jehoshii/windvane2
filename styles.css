@@ -50,6 +50,13 @@ h6 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 7px;
 }
+.clicker {
+  text-align: center;
+  display: block;
+  color: black;
+  margin: 0 auto;
+}
+
 .weather-request {
   display: block;
   margin: 0 auto;
