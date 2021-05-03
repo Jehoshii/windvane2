@@ -56,6 +56,7 @@ function weatherWatch(response) {
   document.querySelector("#windsweep").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#describe").innerHTML = response.data.weather[0].description;
   collectForecast(response.data.coord);
 }
 

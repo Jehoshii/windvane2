@@ -7,6 +7,7 @@ h1 {
   margin: 1;
   font-family: Luminari;
   padding: 3px;
+  image-orientation: flip;
 }
 
 h2 {
@@ -14,7 +15,7 @@ h2 {
   color: darkslateblue;
   font-size: 20px;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 900px;
   padding: 7px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -93,4 +94,8 @@ h5 {
   border-color: darkolivegreen;
   opacity: 60;
   border-width: medium;
+}
+
+span {
+  text-transform: capitalize;
 }
