@@ -23,7 +23,8 @@ h3 {
   display: block;
   max-width: 1000px;
   text-align: center;
-  font-family: Noteworthy;
+  font-family: Optima;
+  font-size: small;
 }
 
 h4 {
@@ -51,6 +52,7 @@ h5 {
 .information {
   border: 2px solid;
   max-width: 300px;
+  border-radius: 100px;
 }
 
 .weather-week {
@@ -64,8 +66,14 @@ h5 {
 }
 
 .intro {
-  background-image: image();
-  max-width: 1000px;
+  background-image: linear-gradient(
+    to bottom,
+    aquamarine,
+    palegreen,
+    yellowgreen,
+    palegreen,
+    aquamarine
+  );
 }
 .plan-ahead {
   display: block;
@@ -81,4 +89,8 @@ h5 {
   margin: 0 auto;
   text-align: center;
   border: 1px solid;
+  border-radius: 30px;
+  border-color: darkolivegreen;
+  opacity: 60;
+  border-width: medium;
 }
